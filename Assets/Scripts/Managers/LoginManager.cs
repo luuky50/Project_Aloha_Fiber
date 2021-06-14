@@ -48,7 +48,7 @@ public class LoginManager : SingletonComponent<LoginManager>
         if (emailInputField.text != "" || passwordInputField.text != "")
         {
             IDbCommand dbcmd = info.dbconn.CreateCommand();
-            string sqlQuery = "SELECT userID, email, password, isTrainer " + "FROM users";
+            string sqlQuery = "SELECT userID, email, password, isTrainer FROM users";
             dbcmd.CommandText = sqlQuery;
             IDataReader reader = dbcmd.ExecuteReader();
             while (reader.Read())
